@@ -15,7 +15,7 @@ export default StyleSheet.create({
     height: 100%;
     border: 1px solid green;
 }
-  '#container': {
+  'container': {
     'boxSizing': 'border-box',
     // top: 30px;
     'outline': '2px solid #000',
