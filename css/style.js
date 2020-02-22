@@ -2,17 +2,35 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   // BODY
-  'body': {
-    'boxSizing': 'border-box',
-    'width': [{ 'unit': '%H', 'value': 1 }],
-    'height': [{ 'unit': '%V', 'value': 1 }],
-    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': 'goldenrod' }]
-  },
+  // body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid goldenrod;
+}
   // CONTAINER
-  'container': {
-    'boxSizing': 'content-box',
-    'width': [{ 'unit': '%H', 'value': 1 }],
+  // .container {
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid green;
+}
+  '#container': {
+    'boxSizing': 'border-box',
+    // top: 30px;
+    'outline': '2px solid #000',
+    'fontSize': [{ 'unit': 'px', 'value': 0 }],
+    'margin': [{ 'unit': 'string', 'value': 'auto' }, { 'unit': 'string', 'value': 'auto' }, { 'unit': 'string', 'value': 'auto' }, { 'unit': 'string', 'value': 'auto' }],
     'height': [{ 'unit': '%V', 'value': 1 }],
-    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': 'green' }]
+    'width': [{ 'unit': 'vw', 'value': 100 }],
+    'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
+    'border': [{ 'unit': 'string', 'value': 'none' }]
+  },
+  'grid': {
+    'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
+    'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
+    'border': [{ 'unit': 'string', 'value': 'none' }],
+    'outline': '1px solid #000',
+    'display': 'inline-block'
   }
 });

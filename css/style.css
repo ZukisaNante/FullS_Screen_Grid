@@ -1,18 +1,40 @@
 /* BODY */
 
-body {
+
+/* body {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
     border: 1px solid goldenrod;
-}
+} */
 
 
 /* CONTAINER */
 
-.container {
+
+/* .container {
     box-sizing: content-box;
     width: 100%;
     height: 100%;
     border: 1px solid green;
+} */
+
+#container {
+    box-sizing: border-box;
+    /* top: 30px; */
+    outline: 2px solid #000;
+    font-size: 0;
+    margin: auto;
+    height: 100%;
+    width: 100vw;
+    padding: 0;
+    border: none;
+}
+
+.grid {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 1px solid #000;
+    display: inline-block;
 }
