@@ -35,7 +35,7 @@ function makeColumns(cellNum) {
 
 $(document).ready(function(){
   $(".cell").on("click", function(){
-    $(this).css("background-color", "red");
+    $(this).css("background-color", "contextmenu");
   });
 
   $(".cell").on("mouseover", function(){
@@ -43,7 +43,7 @@ $(document).ready(function(){
   });
 
   /*colour picker function */
-  $(".cell").on("click", function(){
+
 var idto = "";
 $(document).bind("contextmenu", function (event) {
     event.preventDefault();
@@ -53,7 +53,7 @@ $(document).bind("contextmenu", function (event) {
         top: event.pageY + "px",
         left: event.pageX + "px"
     });
-    idto = event.target.cell
+    idto = event.target.id
 }).bind("click", function (event) {    
     $("div.custom-menu").hide();
 });
@@ -64,5 +64,5 @@ $("body").on('click', ".custom-menu div", function() {
 })
 
 });
-});
+
 
