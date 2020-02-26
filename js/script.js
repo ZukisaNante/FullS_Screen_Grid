@@ -28,15 +28,78 @@ function refreshGrid() {
 $(document).ready(function() {
     createGrid(50);
 
-    $(".grid").mouseover(function() {
-        $(this).css("background-color", "black");
-    });
+    // $(".grid").mouseover(function() {
+    //     $(this).css("background-color", "black");
+    // });
 
     $(".newGrid").click(function() {
         refreshGrid();
 
-        $(".grid").mouseover(function() {
-            $(this).css("background-color", "black");
-        });
+        // $(".grid").mouseover(function() {
+        //     $(this).css("background-color", "black");
+        // });
     });
+
+    /*http://jsfiddle.net/f5EMT/1/*/
+    var mousePosition;
+    var offset = [0,0];
+    var div;
+    var isDown = false;
+
+    div = document.getElementById('myColorPicker');
+
+    div.addEventListener('mousedown', function(e) {
+        isDown = true;
+        offset = [
+            div.offsetLeft - e.clientX,
+            div.offsetTop - e.clientY
+        ];
+    }, true);
+
+    document.addEventListener('mouseup', function() {
+        isDown = false;
+    }, true);
+
+    document.addEventListener('mousemove', function(event) {
+        event.preventDefault();
+        if (isDown) {
+            mousePosition = {
+
+                x : event.clientX,
+                y : event.clientY
+            };
+            div.style.left = (mousePosition.x + offset[0]) + 'px';
+            div.style.top  = (mousePosition.y + offset[1]) + 'px';
+        }
+    }, true);
+
+    div.container.addEventListener("mousemove",function(e){
+    // http://jsfiddle.net/Meligy/2kyaJ/3/
+    setInterval(function(){
+        var $sample1 = $("#magentaID");
+        var $sample2 = $("#redID");
+        var $sample3 = $("#blueID");
+        var $sample4 = $("#yellowID");
+        var $sample5 = $("#cyanID");
+        if($sample1.is(":hover")) {
+            selectedColor="magenta";
+        }
+        else if($sample2.is(":hover")){
+            selectedColor="red";
+        }
+        else if($sample3.is(":hover")){
+            selectedColor="blue";
+        }
+        else if($sample4.is(":hover")){
+            selectedColor="yellow";
+        }
+        else if($sample5.is(":hover")){
+            selectedColor="cyan";
+        }
+        else {
+           //
+        }
+    }, 200);
+},false);
+
 });

@@ -35,11 +35,11 @@ function makeColumns(cellNum) {
 
 $(document).ready(function(){
   $(".cell").on("click", function(){
-    $(this).css("background-color", "contextmenu");
+    $(this).css("background-color", "red");
   });
 
   $(".cell").on("mouseover", function(){
-    $(this).css("background-color", "black");
+    $(this).css("background-color", "contextmenu");
   });
 
   /*colour picker function */
