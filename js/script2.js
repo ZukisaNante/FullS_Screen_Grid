@@ -41,6 +41,10 @@ $(document).ready(function(){
   $(".cell").on("mouseover", function(){
     $(this).css("background-color", "contextmenu");
   });
+    
+    $(".cell").on("mousedown", function(){
+    $(this).draggable();;
+  });
 
   /*colour picker function */
 
