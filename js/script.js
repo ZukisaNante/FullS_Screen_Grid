@@ -5,8 +5,8 @@ function createGrid(x) {
             $(".container").append("<div class='grid'></div>");
         }
     }
-    $(".grid").width(960/x);
-    $(".grid").height(960/x);
+    $(".grid").width(1000/x);
+    $(".grid").height(1000/x);
 }
 
 // function that clears the grid
@@ -27,6 +27,38 @@ function refreshGrid() {
 // allows the click of a button to prompt the user to create a new grid
 $(document).ready(function() {
     createGrid(50);
+
+    $(".grid").on("click", function(){
+        $(".colorPicker").show();
+        /*http://jsfiddle.net/f5EMT/1/*/
+    
+        var $sample1 = $("#magentaID");
+        var $sample2 = $("#redID");
+        var $sample3 = $("#blueID");
+        var $sample4 = $("#yellowID");
+        var $sample5 = $("#cyanID");
+        if($sample1.is(":hover")) {
+            selectedColor="magenta";
+            $('.cell').css($sample1);
+            $('colorPicker').hide();
+        }
+        else if($sample2.is(":hover")){
+            selectedColor="red";
+        }
+        else if($sample3.is(":hover")){
+            selectedColor="blue";
+        }
+        else if($sample4.is(":hover")){
+            selectedColor="yellow";
+        }
+        else if($sample5.is(":hover")){
+            selectedColor="cyan";
+        }
+        else {
+           //
+        }
+    
+    });
 
     // $(".grid").mouseover(function() {
     //     $(this).css("background-color", "black");
